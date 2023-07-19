@@ -1,5 +1,5 @@
 import { Outlet } from 'react-router-dom';
-import Navbar from '../shared/navbar/Navbar';
+import Navbar from '../components/shared/navbar/Navbar';
 
 function DashboardLayouts() {
   return (
