@@ -1,7 +1,7 @@
 import { Outlet } from 'react-router-dom';
 import Navbar from '../components/shared/navbar/Navbar';
-import AsideAllMenus from '../pages/aside/AsideAllMenus';
-import AsideSearch from '../pages/aside/AsideSearch';
+import AsideAllMenus from '../pages/Aside/AsideAllMenus';
+import AsideSearch from '../pages/Aside/AsideSearch';
 
 function DashboardLayouts() {
   return (

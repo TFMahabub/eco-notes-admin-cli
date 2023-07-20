@@ -1,5 +1,6 @@
 import { FaChartPie } from 'react-icons/fa';
 import { MdOutlineKeyboardArrowRight } from 'react-icons/md';
+import { RiDatabase2Fill } from 'react-icons/ri';
 import SingleNavLink from './SingleNavLink';
 
 function AsideAllMenus() {
@@ -9,16 +10,16 @@ function AsideAllMenus() {
         <SingleNavLink
           toLink="/dashboard"
         >
-          <FaChartPie />
+          <FaChartPie className="text-lg" />
           Admin
         </SingleNavLink>
       </li>
       <li className="">
         <SingleNavLink
-          toLink="/profile"
+          toLink="/products"
         >
-          <FaChartPie />
-          Profile
+          <RiDatabase2Fill className="text-lg" />
+          Products
         </SingleNavLink>
       </li>
       <li className="">
@@ -27,17 +28,21 @@ function AsideAllMenus() {
             DropDown
             <MdOutlineKeyboardArrowRight className="group-open:rotate-90 text-lg font-semibold text-textColor duration-common" />
           </summary>
-          <SingleNavLink
-            toLink="/blogs"
-          >
-            <FaChartPie />
-            Blog
-          </SingleNavLink>
-          <SingleNavLink
-            toLink="/cart-table"
-          >
-            Cart-table
-          </SingleNavLink>
+          <div className="">
+            <SingleNavLink
+              toLink="/blogs"
+              dropDown
+            >
+              <FaChartPie />
+              Blog
+            </SingleNavLink>
+            <SingleNavLink
+              toLink="/cart-table"
+              dropDown
+            >
+              Cart-table
+            </SingleNavLink>
+          </div>
         </details>
       </li>
     </>
