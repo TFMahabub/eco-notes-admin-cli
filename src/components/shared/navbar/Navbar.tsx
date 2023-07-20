@@ -1,66 +1,29 @@
-import { useDispatch, useSelector } from 'react-redux';
-import { Link } from 'react-router-dom';
-import { RootState } from '../../../app/store';
-import { setHamburgerMenu } from '../../../feauters/navbar/navbarSlice';
-import ExitIcon from '../../icons/ExitIcon';
-import Hamburger from '../../icons/HamburgerIcon';
-import OffUserMenus from './OffUserMenus';
-import OnUserMenus from './OnUserMenus';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import { AiOutlineMenuFold } from 'react-icons/ai';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import { RiAdminFill } from 'react-icons/ri';
+import { useAppDispatch, useAppSelector } from '../../../app/hook';
+import { setExpandAsideMenu } from '../../../feauters/navbar/navbarSlice';
 
 function Navbar() {
-  const { hamburgerMenu } = useSelector((state: RootState) => state.navbar);
-  const dispatch = useDispatch();
-  // console.log(cartProducts);
-
-  const user = false;
+  const { expandAsideMenu } = useAppSelector((state) => state.navbar);
+  const dispatch = useAppDispatch();
   return (
-
     <div
-      className="container bg-primary"
+      className="container flex items-center justify-between h-full"
     >
-      <div className="flex items-center justify-between flex-wrap">
-        <div className="flex items-center gap-2 md:gap-4">
-          <Link to="/">
-            <p
-              className="text-2xl font-medium text-white"
-            >
-              {import.meta.env.VITE_COMPANY_NAME}
-            </p>
-          </Link>
-        </div>
-        <div className="flex items-center gap-common">
-          {/* -----------common-menus----------- */}
-          <button
-            type="button"
-            onClick={() => dispatch(setHamburgerMenu())}
-            className="cursor-pointer md:hidden"
-          >
-            {!hamburgerMenu
-                && (
-                <Hamburger />
-                )}
-            {hamburgerMenu
-                && (
-                <ExitIcon />
-                )}
-          </button>
-          {/* -----------common-menus----------- */}
-          <div
-            className="hidden lg:flex lg:items-center lg:gap-common"
-          >
-            {
-              user ? <OnUserMenus /> : <OffUserMenus />
-            }
-          </div>
+      <div className="flex items-center gap-common_75">
+        <span role="button" onClick={() => dispatch(setExpandAsideMenu())}>
+          <AiOutlineMenuFold
+            className={`text-xl text-secondary cursor-pointer ${expandAsideMenu ? 'rotate-180' : ''}`}
+          />
+        </span>
+        <div className="flex items-center gap-2">
+          <RiAdminFill className="text-xl text-secondary" />
+          <h4 className="text-lg font-semibold text-secondary">Admin Panal</h4>
         </div>
       </div>
-      <div
-        className={`transform transition-all duration-300 ease-linear ${hamburgerMenu ? 'mt-common flex flex-col items-center gap-1 lg:hidden pb-common-1' : 'hidden h-0'}`}
-      >
-        {
-          user ? <OnUserMenus /> : <OffUserMenus />
-        }
-      </div>
+      <h4>this is navbar</h4>
     </div>
   );
 }

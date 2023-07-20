@@ -1,7 +1,7 @@
 function Dashboard() {
   return (
     <div>
-      this is dashboard
+      <p>this is ddash bossr</p>
     </div>
   );
 }

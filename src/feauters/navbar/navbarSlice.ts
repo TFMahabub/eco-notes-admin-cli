@@ -1,24 +1,24 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 export interface NavbarState {
-  hamburgerMenu: boolean;
+  expandAsideMenu: boolean;
 }
 
 const initialState: NavbarState = {
-  hamburgerMenu: false,
+  expandAsideMenu: true,
 };
 
 export const navbarSlice = createSlice({
   name: 'navbar',
   initialState,
   reducers: {
-    setHamburgerMenu: (state:{ hamburgerMenu:boolean }) => {
-      state.hamburgerMenu = !state.hamburgerMenu;
+    setExpandAsideMenu: (state) => {
+      // eslint-disable-next-line no-param-reassign
+      state.expandAsideMenu = !state.expandAsideMenu;
     },
   },
 });
 
-// Action creators are generated for each case reducer function
-export const { setHamburgerMenu } = navbarSlice.actions;
+export const { setExpandAsideMenu } = navbarSlice.actions;
 
 export default navbarSlice.reducer;
