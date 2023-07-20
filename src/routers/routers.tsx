@@ -11,6 +11,18 @@ const router = createBrowserRouter([
         path: '/dashboard',
         element: <Dashboard />,
       },
+      {
+        path: '/blogs',
+        element: <p>blogpage</p>,
+      },
+      {
+        path: '/profile',
+        element: <p>profile</p>,
+      },
+      {
+        path: '/cart-table',
+        element: <p>cart-table</p>,
+      },
     ],
 
   },

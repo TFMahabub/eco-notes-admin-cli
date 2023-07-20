@@ -5,24 +5,25 @@ export default {
   ],
   theme: {
     colors: {
-      primary: '#149777',
-      secondary: '#FFC800',
+      primary: '#1d1d1d',
+      secondary: '#fff',
       textColor: '#707676',
       headingTextColor: '#2c2c2c',
-      white: '#fff',
       gray:'#707676',
       lightGray: '#f1f1f1',
-      error: '#EA5252'
+      error: '#EA5252',
+      blue: '#6571FF',
     },
     extend: {
       spacing: {
         common: '16px',
+        common_75: '18px',
         partGap: '25px',
         sectionGap: '45px',
         navbarHeight: '4rem'
       },
       transitionDuration: {
-        'common': '200ms',
+        'common': '300ms',
       }
     },
   },
