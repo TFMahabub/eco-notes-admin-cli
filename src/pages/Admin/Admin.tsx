@@ -1,3 +1,4 @@
+import TextDashboardSectionTitle from '../../components/utils/ReUse/TextDashboardSectionTitle';
 import BlogsTable from './BlogsTable';
 import ChartBlogHighLikeCommentRate from './ChartBlogHighLikeCommentRate';
 import ChartBlogPostRate from './ChartBlogPostRate';
@@ -13,9 +14,9 @@ function Admin() {
       <div className="flex items-center justify-between gap-common">
         <div className="w-full bg-secondary p-common space-y-common">
           <article className="text-start">
-            <p className="text-lg font-semibold text-textColor tracking-wide">
+            <TextDashboardSectionTitle>
               This week blog post rate:
-            </p>
+            </TextDashboardSectionTitle>
           </article>
           <ChartBlogPostRate />
         </div>

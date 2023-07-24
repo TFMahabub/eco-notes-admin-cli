@@ -1,12 +1,31 @@
-import { RiDeleteBinLine, RiEditBoxLine } from 'react-icons/ri';
+/* eslint-disable max-lines */
+import { HiOutlineEye } from 'react-icons/hi';
+import { RiDeleteBinLine } from 'react-icons/ri';
 import { Link } from 'react-router-dom';
+import TextDashboardSectionTitle from '../../components/utils/ReUse/TextDashboardSectionTitle';
+import BlogsShortingOption from './BlogsShortingOption';
 import BlogsTablesHeader from './BlogsTablesHeader';
 
 function BlogsTable() {
   const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
   return (
     <section className="mt-sectionGap p-8 space-y-6">
-      <h3>Delete User Info</h3>
+      <div className="flex items-center justify-between">
+        <TextDashboardSectionTitle>All Blogs Here</TextDashboardSectionTitle>
+        <div className="flex items-center gap-2">
+          <label htmlFor="" className="flex flex-col gap-1">
+            <input
+              type="text"
+              name=""
+              id=""
+              placeholder="Search..."
+              className="border border-gray/60 focus:border-green/60 rounded-md h-9 px-4 w-60 focus:outline-none right-0 text-textColor"
+            />
+          </label>
+          <BlogsShortingOption />
+        </div>
+      </div>
+      <div />
       <table className="w-full whitespace-nowrap text-gray">
         <thead>
           <BlogsTablesHeader />
@@ -78,13 +97,13 @@ function BlogsTable() {
                   </button>
                   <Link
                     to="/"
-                    className="flex items-center gap-1 text-md px-2 rounded-md py-[6px] text-primary bg-primary/10 cursor-pointer hover:bg-primary/20"
+                    className="flex items-center gap-1 text-md px-2 rounded-md py-[6px] text-green bg-green/10 cursor-pointer hover:bg-green/20"
                   >
-                    <RiEditBoxLine
+                    <HiOutlineEye
                       className="text-xl"
                     />
                     {' '}
-                    Edit
+                    Watch
                   </Link>
                 </div>
               </td>
