@@ -16,7 +16,7 @@ function DashboardLayouts() {
             </ul>
           </section>
         </aside>
-        <main className="col-span-5 lg:col-span-4 h-full overflow-y-auto pt-common_75">
+        <main className="col-span-5 lg:col-span-4 h-full overflow-y-auto pt-common_75 p-common">
           <Outlet />
         </main>
       </section>

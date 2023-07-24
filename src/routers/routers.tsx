@@ -1,6 +1,6 @@
 import { createBrowserRouter } from 'react-router-dom';
 import DashboardLayouts from '../layouts/DashboardLayout';
-import Dashboard from '../pages/Dashboard/Dashboard';
+import Admin from '../pages/Admin/Admin';
 import Products from '../pages/Products/Products';
 import WellcomePage from '../pages/wellcome/WellcomePage';
 
@@ -14,8 +14,8 @@ const router = createBrowserRouter([
         element: <WellcomePage />,
       },
       {
-        path: '/dashboard',
-        element: <Dashboard />,
+        path: '/admin',
+        element: <Admin />,
       },
       {
         path: '/products',

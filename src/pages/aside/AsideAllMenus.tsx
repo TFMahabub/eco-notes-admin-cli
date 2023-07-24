@@ -9,7 +9,7 @@ function AsideAllMenus() {
     <>
       <li className="">
         <SingleNavLink
-          toLink="/dashboard"
+          toLink="/admin"
         >
           <FaChartPie className="text-lg" />
           Admin

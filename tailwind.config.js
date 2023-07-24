@@ -13,6 +13,10 @@ export default {
       lightGray: '#f1f1f1',
       error: '#EA5252',
       blue: '#6571FF',
+      green: '#0AC074',
+      pink: '#E83E8C',
+      orenge: '#ff7828',
+      pruple: '#b464c8',
     },
     extend: {
       spacing: {
