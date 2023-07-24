@@ -1,6 +1,8 @@
 import { createBrowserRouter } from 'react-router-dom';
 import DashboardLayouts from '../layouts/DashboardLayout';
-import Dashboard from '../pages/dashboard/Dashboard';
+import Admin from '../pages/Admin/Admin';
+import Products from '../pages/Products/Products';
+import WellcomePage from '../pages/wellcome/WellcomePage';
 
 const router = createBrowserRouter([
   {
@@ -8,15 +10,19 @@ const router = createBrowserRouter([
     element: <DashboardLayouts />,
     children: [
       {
-        path: '/dashboard',
-        element: <Dashboard />,
+        path: '/',
+        element: <WellcomePage />,
       },
       {
-        path: '/blogs',
-        element: <p>blogpage</p>,
+        path: '/admin',
+        element: <Admin />,
       },
       {
-        path: '/profile',
+        path: '/products',
+        element: <Products />,
+      },
+      {
+        path: '/users',
         element: <p>profile</p>,
       },
       {
