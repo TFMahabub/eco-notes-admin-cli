@@ -1,7 +1,7 @@
 import TextDashboardSectionTitle from '../../components/utils/ReUse/TextDashboardSectionTitle';
-import BlogsTable from './BlogsTable';
 import ChartBlogHighLikeCommentRate from './ChartBlogHighLikeCommentRate';
 import ChartBlogPostRate from './ChartBlogPostRate';
+import RecentBlogTable from './RecentBlogTable';
 import TopBoxPart from './TopBoxPart';
 
 function Admin() {
@@ -10,7 +10,7 @@ function Admin() {
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
         <TopBoxPart />
       </div>
-      {/* --------------Cart-Part-------------- */}
+      {/* --------------Chart-Part-------------- */}
       <div className="flex items-center justify-between gap-common">
         <div className="w-full bg-secondary p-common space-y-common">
           <article className="text-start">
@@ -25,8 +25,9 @@ function Admin() {
         </div>
       </div>
       {/* -------------All-Blogs--------------- */}
-      <div className="bg-secondary">
-        <BlogsTable />
+      <div className="bg-secondary p-6 space-y-common">
+        <TextDashboardSectionTitle>Recent Post Blogs</TextDashboardSectionTitle>
+        <RecentBlogTable />
       </div>
     </section>
   );

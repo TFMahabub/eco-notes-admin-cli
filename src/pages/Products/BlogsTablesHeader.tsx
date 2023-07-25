@@ -1,6 +1,6 @@
 function BlogsTablesHeader() {
   return (
-    <tr className="h-16 w-full text-lg tracking-wide bg-gray/10">
+    <tr className="h-10 w-full text-lg tracking-wide bg-gray/10">
       <th className="text-start bg-gray-5 text-textColor font-semibold text-sm pl-4">
         {/* Browser */}
         Select

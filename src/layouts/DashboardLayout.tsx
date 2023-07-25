@@ -1,6 +1,6 @@
 import { Outlet } from 'react-router-dom';
 import Navbar from '../components/shared/navbar/Navbar';
-import AsideAllMenus from '../pages/Aside/AsideAllMenus';
+import AsideAllMenus from '../pages/aside/AsideAllMenus';
 
 function DashboardLayouts() {
   return (
