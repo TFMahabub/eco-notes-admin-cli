@@ -1,4 +1,3 @@
-import { GoDiscussionOutdated } from 'react-icons/go';
 import { IoMdPricetags } from 'react-icons/io';
 import { MdFormatListBulleted, MdLibraryBooks } from 'react-icons/md';
 import { RiUserFill } from 'react-icons/ri';
@@ -47,17 +46,6 @@ function TopBoxPart() {
           quantity="10k"
         >
           <MdFormatListBulleted
-            className="text-6xl p-2 bg-secondary/50 rounded-lg font-semibold text-secondary"
-          />
-        </TopBoxComponent>
-      </div>
-      {/* --------------Discuss-------------- */}
-      <div className="flex items-center justify-center gap-common bg-pruple h-32 rounded-lg">
-        <TopBoxComponent
-          itemName="Discuss"
-          quantity="100k"
-        >
-          <GoDiscussionOutdated
             className="text-6xl p-2 bg-secondary/50 rounded-lg font-semibold text-secondary"
           />
         </TopBoxComponent>

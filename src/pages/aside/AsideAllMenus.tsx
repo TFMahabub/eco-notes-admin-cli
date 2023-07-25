@@ -2,7 +2,7 @@
 import { BsListUl } from 'react-icons/bs';
 import { FaChartPie, FaKeyboard } from 'react-icons/fa';
 import { IoMdPricetags } from 'react-icons/io';
-import { MdOutlineKeyboardArrowRight, MdOutlineLibraryBooks } from 'react-icons/md';
+import { MdLibraryBooks, MdOutlineKeyboardArrowRight } from 'react-icons/md';
 import { RiDatabase2Fill, RiUser3Fill } from 'react-icons/ri';
 import { TbUsersGroup } from 'react-icons/tb';
 import SingleNavLink from './SingleNavLink';
@@ -33,7 +33,7 @@ function AsideAllMenus() {
               toLink="/products/blogs"
               dropDown
             >
-              <MdOutlineLibraryBooks className="text-lg" />
+              <MdLibraryBooks className="text-lg" />
               Blogs
             </SingleNavLink>
             <SingleNavLink

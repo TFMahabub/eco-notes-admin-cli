@@ -2,6 +2,7 @@ import { createBrowserRouter } from 'react-router-dom';
 import DashboardLayouts from '../layouts/DashboardLayout';
 import Admin from '../pages/Admin/Admin';
 import BlogsPage from '../pages/Products/Blogs/BlogPage';
+import TagsPage from '../pages/Products/Tags/TagsPage';
 import WellcomePage from '../pages/wellcome/WellcomePage';
 
 const router = createBrowserRouter([
@@ -23,7 +24,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/products/tags',
-        element: <BlogsPage />,
+        element: <TagsPage />,
       },
       {
         path: '/products/blogs',

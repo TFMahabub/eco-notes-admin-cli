@@ -2,19 +2,13 @@ function BlogsTablesHeader() {
   return (
     <tr className="h-10 w-full text-sm tracking-wide bg-gray/5 uppercase">
       <th className="text-start text-textColor font-normal pl-4">
-        Blog Id
+        Tags Id
       </th>
       <th className="text-start text-textColor font-normal pl-4">
-        Image
+        Name
       </th>
       <th className="text-start text-textColor font-normal pl-4">
-        Title
-      </th>
-      <th className="text-start text-textColor font-normal pl-12">
-        Author
-      </th>
-      <th className="text-start text-textColor font-normal pl-12">
-        Time
+        Color
       </th>
       <th className="text-start text-textColor font-normal pl-24">
         Action
