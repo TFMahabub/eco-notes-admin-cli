@@ -3,7 +3,7 @@ import { CiImageOff } from 'react-icons/ci';
 import { HiOutlineEye } from 'react-icons/hi';
 import { RiDeleteBinLine } from 'react-icons/ri';
 import { Link } from 'react-router-dom';
-import TextDashboardSectionTitle from '../../components/utils/ReUse/TextDashboardSectionTitle';
+import TextDashboardSectionTitle from '../../../components/utils/ReUse/TextDashboardSectionTitle';
 import BlogSearchingOption from './BlogSearchingOption';
 import BlogsShortingOption from './BlogsShortingOption';
 import BlogsTablesHeader from './BlogsTablesHeader';

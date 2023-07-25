@@ -1,6 +1,6 @@
 import BlogsTable from './BlogsTable';
 
-function Products() {
+function BlogsPage() {
   return (
     <>
       <div className="bg-secondary">
@@ -13,4 +13,4 @@ function Products() {
   );
 }
 
-export default Products;
+export default BlogsPage;
