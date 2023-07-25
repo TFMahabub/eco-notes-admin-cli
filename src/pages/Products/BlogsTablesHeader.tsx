@@ -1,28 +1,22 @@
 function BlogsTablesHeader() {
   return (
-    <tr className="h-10 w-full text-lg tracking-wide bg-gray/10">
-      <th className="text-start bg-gray-5 text-textColor font-semibold text-sm pl-4">
-        {/* Browser */}
-        Select
-      </th>
-      <th className="text-start bg-gray-5 text-textColor font-semibold text-sm pl-4">
-        {/* serial */}
+    <tr className="h-10 w-full text-sm tracking-wide bg-gray/5 uppercase">
+      <th className="text-start text-textColor font-normal pl-4">
         Blog Id
       </th>
-      <th className="text-start bg-gray-5 text-textColor font-semibold text-sm pl-4">
-        {/* serial */}
+      <th className="text-start text-textColor font-normal pl-4">
+        Image
+      </th>
+      <th className="text-start text-textColor font-normal pl-4">
         Title
       </th>
-      <th className="text-start bg-gray-5 text-textColor font-semibold text-sm pl-12">
-        {/* Location */}
+      <th className="text-start text-textColor font-normal pl-12">
         Author
       </th>
-      <th className="text-start bg-gray-5 text-textColor font-semibold text-sm pl-12">
-        {/* Last Activity */}
+      <th className="text-start text-textColor font-normal pl-12">
         Time
       </th>
-      <th className="text-start bg-gray-5 text-textColor font-semibold text-sm pl-24">
-        {/* Last Activity */}
+      <th className="text-start text-textColor font-normal pl-24">
         Action
       </th>
     </tr>
