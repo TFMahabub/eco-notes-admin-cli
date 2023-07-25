@@ -8,7 +8,7 @@ function DashboardLayouts() {
       <nav className="absolute w-full top-0 bg-primary h-14">
         <Navbar />
       </nav>
-      <section className="grid grid-cols-5 pt-14 h-screen gap-common_75">
+      <section className="grid grid-cols-5 pt-14 h-screen gap-">
         <aside className="col-span-5 lg:col-span-1 bg-secondary h-full overflow-y-auto">
           <section className=" space-y-common_75">
             <ul>
@@ -16,7 +16,7 @@ function DashboardLayouts() {
             </ul>
           </section>
         </aside>
-        <main className="col-span-5 lg:col-span-4 h-full overflow-y-auto pt-common_75 p-common">
+        <main className="col-span-5 lg:col-span-4 h-full overflow-y-auto p-common_75">
           <Outlet />
         </main>
       </section>

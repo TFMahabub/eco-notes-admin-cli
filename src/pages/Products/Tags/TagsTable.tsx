@@ -10,7 +10,7 @@ import TagsShortingOption from './TagsShortingOption';
 function TagsTable() {
   const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
   return (
-    <section className="mt-sectionGap p-8 space-y-6">
+    <>
       <div className="flex items-center justify-between">
         <TextDashboardSectionTitle>All Blogs Here</TextDashboardSectionTitle>
         <div className="flex items-center gap-2">
@@ -82,7 +82,7 @@ function TagsTable() {
           ))}
         </tbody>
       </table>
-    </section>
+    </>
   );
 }
 

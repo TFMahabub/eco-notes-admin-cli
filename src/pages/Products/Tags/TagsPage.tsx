@@ -3,7 +3,7 @@ import TagsTable from './TagsTable';
 function TagsPage() {
   return (
     <>
-      <div className="bg-secondary">
+      <div className="bg-secondary p-8 space-y-6">
         <TagsTable />
       </div>
       <div>

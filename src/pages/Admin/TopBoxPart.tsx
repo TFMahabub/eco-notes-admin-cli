@@ -13,7 +13,7 @@ function TopBoxPart() {
           quantity="220k"
         >
           <MdLibraryBooks
-            className="text-6xl p-2 bg-secondary/50 rounded-lg font-semibold text-secondary"
+            className="text-6xl p-2 bg-secondary/30 rounded-lg font-semibold text-secondary"
           />
         </TopBoxComponent>
       </div>
@@ -24,7 +24,7 @@ function TopBoxPart() {
           quantity="100k"
         >
           <RiUserFill
-            className="text-6xl p-2 bg-secondary/50 rounded-lg font-semibold text-secondary"
+            className="text-6xl p-2 bg-secondary/30 rounded-lg font-semibold text-secondary"
           />
         </TopBoxComponent>
       </div>
@@ -35,7 +35,7 @@ function TopBoxPart() {
           quantity="100k"
         >
           <IoMdPricetags
-            className="text-6xl p-2 bg-secondary/50 rounded-lg font-semibold text-secondary"
+            className="text-6xl p-2 bg-secondary/30 rounded-lg font-semibold text-secondary"
           />
         </TopBoxComponent>
       </div>
@@ -46,7 +46,7 @@ function TopBoxPart() {
           quantity="10k"
         >
           <MdFormatListBulleted
-            className="text-6xl p-2 bg-secondary/50 rounded-lg font-semibold text-secondary"
+            className="text-6xl p-2 bg-secondary/30 rounded-lg font-semibold text-secondary"
           />
         </TopBoxComponent>
       </div>
