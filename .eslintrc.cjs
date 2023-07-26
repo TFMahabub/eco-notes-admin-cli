@@ -19,6 +19,6 @@ module.exports = {
       'error', { devDependencies: false, optionalDependencies: false, peerDependencies: false },
     ],
     'no-console': 'error',
-    'max-lines': ['error', 80],
+    'max-lines': ['error', 100],
   },
 };

@@ -1,6 +1,7 @@
 import TextDashboardSectionTitle from '../../components/utils/ReUse/TextDashboardSectionTitle';
 import ChartBlogHighLikeCommentRate from './ChartBlogHighLikeCommentRate';
 import ChartBlogPostRate from './ChartBlogPostRate';
+import MostPopularBlogsTable from './MostPopularBlogsTable';
 import RecentBlogTable from './RecentBlogTable';
 import TopBoxPart from './TopBoxPart';
 
@@ -24,10 +25,15 @@ function Admin() {
           <ChartBlogHighLikeCommentRate />
         </div>
       </div>
-      {/* -------------All-Blogs--------------- */}
+      {/* -------------Recent-post-Blogs--------------- */}
       <div className="bg-secondary p-6 space-y-common">
         <TextDashboardSectionTitle>Recent Post Blogs</TextDashboardSectionTitle>
         <RecentBlogTable />
+      </div>
+      {/* -------------Most-popular-Blogs--------------- */}
+      <div className="bg-secondary p-6 space-y-common">
+        <TextDashboardSectionTitle>Most popular Blogs</TextDashboardSectionTitle>
+        <MostPopularBlogsTable />
       </div>
     </section>
   );
