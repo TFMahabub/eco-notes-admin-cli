@@ -5,7 +5,7 @@ import MostPopularBlogsTable from './MostPopularBlogsTable';
 import RecentBlogTable from './RecentBlogTable';
 import TopBoxPart from './TopBoxPart';
 
-function Admin() {
+function Dashboard() {
   return (
     <section className="h-full space-y-partGap">
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
@@ -39,4 +39,4 @@ function Admin() {
   );
 }
 
-export default Admin;
+export default Dashboard;

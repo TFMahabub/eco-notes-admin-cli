@@ -1,6 +1,6 @@
 import { createBrowserRouter } from 'react-router-dom';
 import DashboardLayouts from '../layouts/DashboardLayout';
-import Admin from '../pages/Admin/Admin';
+import Dashboard from '../pages/Dashboard/Dashboard';
 import BlogsPage from '../pages/Products/Blogs/BlogPage';
 import ListingPage from '../pages/Products/Listings/ListingPage';
 import TagsPage from '../pages/Products/Tags/TagsPage';
@@ -14,11 +14,11 @@ const router = createBrowserRouter([
     children: [
       {
         path: '/',
-        element: <Admin />,
+        element: <Dashboard />,
       },
       {
-        path: '/admin',
-        element: <Admin />,
+        path: '/dashboard',
+        element: <Dashboard />,
       },
       {
         path: '/products/blogs',

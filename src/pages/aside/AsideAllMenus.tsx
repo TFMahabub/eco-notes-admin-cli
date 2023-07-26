@@ -16,10 +16,10 @@ function AsideAllMenus() {
     <>
       <li className="">
         <SingleNavLink
-          toLink="/admin"
+          toLink="/dashboard"
         >
           <FaChartPie className="text-lg" />
-          Admin
+          Dashboard
         </SingleNavLink>
       </li>
       {/* ----------------Products---------------- */}
@@ -35,29 +35,27 @@ function AsideAllMenus() {
             </span>
             <MdOutlineKeyboardArrowRight className="group-open:rotate-90 text-xl font-semibold text-textColor duration-common" />
           </summary>
-          <div className="">
-            <SingleNavLink
-              toLink="/products/blogs"
-              dropDown
-            >
-              <MdLibraryBooks className="text-lg" />
-              Blogs
-            </SingleNavLink>
-            <SingleNavLink
-              toLink="/products/tags"
-              dropDown
-            >
-              <IoMdPricetags className="text-lg" />
-              Tags
-            </SingleNavLink>
-            <SingleNavLink
-              toLink="/products/listing"
-              dropDown
-            >
-              <BsListUl className="text-lg" />
-              Listing
-            </SingleNavLink>
-          </div>
+          <SingleNavLink
+            toLink="/products/blogs"
+            dropDown
+          >
+            <MdLibraryBooks className="text-lg" />
+            Blogs
+          </SingleNavLink>
+          <SingleNavLink
+            toLink="/products/tags"
+            dropDown
+          >
+            <IoMdPricetags className="text-lg" />
+            Tags
+          </SingleNavLink>
+          <SingleNavLink
+            toLink="/products/listing"
+            dropDown
+          >
+            <BsListUl className="text-lg" />
+            Listing
+          </SingleNavLink>
         </details>
       </li>
       {/* ----------------Users---------------- */}

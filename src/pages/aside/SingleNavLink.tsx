@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom';
 
 function SingleNavLink(
   // eslint-disable-next-line react/require-default-props
-  { toLink, children, dropDown }:{ toLink:string, children: any, dropDown?:boolean; },
+  { toLink, children, dropDown }:{ toLink:string, children: React.ReactNode, dropDown?:boolean; },
 ) {
   return (
     <NavLink
