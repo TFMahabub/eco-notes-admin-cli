@@ -5,9 +5,13 @@ import { IoMdPricetags } from 'react-icons/io';
 import { MdLibraryBooks, MdOutlineKeyboardArrowRight } from 'react-icons/md';
 import { RiDatabase2Fill, RiUser3Fill } from 'react-icons/ri';
 import { TbUsersGroup } from 'react-icons/tb';
+import { useLocation } from 'react-router-dom';
 import SingleNavLink from './SingleNavLink';
 
 function AsideAllMenus() {
+  const location = useLocation();
+  const currentRoute = location.pathname;
+
   return (
     <>
       <li className="">
@@ -20,7 +24,10 @@ function AsideAllMenus() {
       </li>
       {/* ----------------Products---------------- */}
       <li className="">
-        <details className="group">
+        <details
+          className="group"
+          open={currentRoute === '/products/blogs' || currentRoute === '/products/tags' || currentRoute === '/products/listing'}
+        >
           <summary className="flex items-center justify-between border-l-[6px] border-secondary group-hover:border-blue group-hover:bg-blue/20 px-12 py-2 text-base text-textColor cursor-pointer">
             <span className="flex items-center gap-2 group-open:text-blue">
               <RiDatabase2Fill className="text-lg" />
@@ -55,7 +62,10 @@ function AsideAllMenus() {
       </li>
       {/* ----------------Users---------------- */}
       <li className="">
-        <details className="group">
+        <details
+          className="group"
+          open={currentRoute === '/users/gest-users' || currentRoute === '/users/developers'}
+        >
           <summary className="flex items-center justify-between border-l-[6px] border-secondary group-hover:border-blue group-hover:bg-blue/20 px-12 py-2 text-base text-textColor cursor-pointer">
             <span className="flex items-center gap-2 group-open:text-blue">
               <RiUser3Fill className="text-lg" />
@@ -73,7 +83,7 @@ function AsideAllMenus() {
               Gest Users
             </SingleNavLink>
             <SingleNavLink
-              toLink="/cart-table"
+              toLink="/developers"
               dropDown
             >
               <FaKeyboard className="text-lg" />

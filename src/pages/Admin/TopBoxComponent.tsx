@@ -2,13 +2,13 @@ import TextMedium from '../../components/utils/ReUse/TextMedum';
 import TextPrimary from '../../components/utils/ReUse/TextPrimary';
 
 function TopBoxComponent(
-  { children, quantity, itemName }:{ children: React.ReactNode; quantity: string; itemName:string },
+  { children, quantity, itemName }:{ children: React.ReactNode; quantity?: string; itemName:string },
 ) {
   return (
     <>
       {children}
       <div>
-        <TextPrimary extraClass="text-secondary">{quantity}</TextPrimary>
+        <TextPrimary extraClass="text-secondary">{quantity || '000'}</TextPrimary>
         <TextMedium extraClass="text-end text-secondary">{itemName}</TextMedium>
       </div>
     </>
