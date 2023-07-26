@@ -62,7 +62,7 @@ function AsideAllMenus() {
       <li className="">
         <details
           className="group"
-          open={currentRoute === '/users/gest-users' || currentRoute === '/users/developers'}
+          open={currentRoute === '/users/gest-users' || currentRoute === '/users/developers-users'}
         >
           <summary className="flex items-center justify-between border-l-[6px] border-secondary group-hover:border-blue group-hover:bg-blue/20 px-12 py-2 text-base text-textColor cursor-pointer">
             <span className="flex items-center gap-2 group-open:text-blue">
