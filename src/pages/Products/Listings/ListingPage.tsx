@@ -1,0 +1,16 @@
+import ListingTable from './ListingTable';
+
+function ListingPage() {
+  return (
+    <>
+      <div className="bg-secondary p-8 space-y-6">
+        <ListingTable />
+      </div>
+      <div>
+        another section
+      </div>
+    </>
+  );
+}
+
+export default ListingPage;

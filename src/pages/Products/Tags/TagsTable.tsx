@@ -2,10 +2,10 @@
 import { HiOutlineEye } from 'react-icons/hi';
 import { RiDeleteBinLine } from 'react-icons/ri';
 import { Link } from 'react-router-dom';
+import SearchingInput from '../../../components/utils/ReUse/SearchingInput';
+import ShortingInput from '../../../components/utils/ReUse/ShortingInput';
 import TextDashboardSectionTitle from '../../../components/utils/ReUse/TextDashboardSectionTitle';
-import BlogsTablesHeader from '../Blogs/BlogsTablesHeader';
-import TagsSearchingOption from './TagsSearchingOption';
-import TagsShortingOption from './TagsShortingOption';
+import TagsTableHeader from './TagsTableHeader';
 
 function TagsTable() {
   const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
@@ -14,14 +14,18 @@ function TagsTable() {
       <div className="flex items-center justify-between">
         <TextDashboardSectionTitle>All Blogs Here</TextDashboardSectionTitle>
         <div className="flex items-center gap-2">
-          <TagsSearchingOption />
-          <TagsShortingOption />
+          <SearchingInput
+            id="tags"
+            name="tags"
+          />
+          {/* <TagsShortingOption /> */}
+          <ShortingInput />
         </div>
       </div>
       <div />
       <table className="w-full whitespace-nowrap text-gray">
         <thead>
-          <BlogsTablesHeader />
+          <TagsTableHeader />
         </thead>
         <tbody className="h-20 overflow-y-auto">
           {array.map((user) => (

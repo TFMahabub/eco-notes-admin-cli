@@ -2,8 +2,10 @@ import { createBrowserRouter } from 'react-router-dom';
 import DashboardLayouts from '../layouts/DashboardLayout';
 import Admin from '../pages/Admin/Admin';
 import BlogsPage from '../pages/Products/Blogs/BlogPage';
+import ListingPage from '../pages/Products/Listings/ListingPage';
 import TagsPage from '../pages/Products/Tags/TagsPage';
-import WellcomePage from '../pages/wellcome/WellcomePage';
+import DeveloperUsersPage from '../pages/users/Developers/DeveloperUsersPage';
+import GestUsersPage from '../pages/users/gestUsers.tsx/GestUsersPage';
 
 const router = createBrowserRouter([
   {
@@ -12,7 +14,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: '/',
-        element: <WellcomePage />,
+        element: <Admin />,
       },
       {
         path: '/admin',
@@ -28,7 +30,15 @@ const router = createBrowserRouter([
       },
       {
         path: '/products/listing',
-        element: <BlogsPage />,
+        element: <ListingPage />,
+      },
+      {
+        path: '/users/gest-users',
+        element: <GestUsersPage />,
+      },
+      {
+        path: '/users/developers-users',
+        element: <DeveloperUsersPage />,
       },
     ],
 
