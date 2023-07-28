@@ -1,7 +1,7 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 import Select from 'react-select';
 
-function BlogsShortingOption() {
+function ShortingInput() {
   const shortingOptions = [
     { value: 'Recent', label: 'Recent' },
   ];
@@ -13,4 +13,4 @@ function BlogsShortingOption() {
   );
 }
 
-export default BlogsShortingOption;
+export default ShortingInput;

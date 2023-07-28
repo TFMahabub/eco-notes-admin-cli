@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import TextDashboardSectionTitle from '../../components/utils/ReUse/TextDashboardSectionTitle';
 import ChartBlogHighLikeCommentRate from './ChartBlogHighLikeCommentRate';
 import ChartBlogPostRate from './ChartBlogPostRate';
@@ -5,9 +6,15 @@ import MostPopularBlogsTable from './MostPopularBlogsTable';
 import RecentBlogTable from './RecentBlogTable';
 import TopBoxPart from './TopBoxPart';
 
-function Admin() {
+function Dashboard() {
+  useEffect(() => {
+    document.title = 'Dashboard';
+  }, []);
   return (
     <section className="h-full space-y-partGap">
+      <head>
+        <title>Dashboard</title>
+      </head>
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
         <TopBoxPart />
       </div>
@@ -39,4 +46,4 @@ function Admin() {
   );
 }
 
-export default Admin;
+export default Dashboard;

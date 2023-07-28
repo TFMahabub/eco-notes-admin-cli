@@ -1,14 +1,14 @@
 import { useEffect } from 'react';
-import TagsTable from './TagsTable';
+import DeveloperUsersTable from './DeveloperUsersTable';
 
-function TagsPage() {
+function DeveloperUsersPage() {
   useEffect(() => {
-    document.title = 'Tags';
+    document.title = 'Developers';
   }, []);
   return (
     <>
       <div className="bg-secondary p-8 space-y-6">
-        <TagsTable />
+        <DeveloperUsersTable />
       </div>
       <div>
         another section
@@ -17,4 +17,4 @@ function TagsPage() {
   );
 }
 
-export default TagsPage;
+export default DeveloperUsersPage;

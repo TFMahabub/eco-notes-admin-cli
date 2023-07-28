@@ -1,4 +1,5 @@
 /* eslint-disable max-lines */
+
 import { BsListUl } from 'react-icons/bs';
 import { FaChartPie, FaKeyboard } from 'react-icons/fa';
 import { IoMdPricetags } from 'react-icons/io';
@@ -16,10 +17,10 @@ function AsideAllMenus() {
     <>
       <li className="">
         <SingleNavLink
-          toLink="/admin"
+          toLink="/dashboard"
         >
           <FaChartPie className="text-lg" />
-          Admin
+          Dashboard
         </SingleNavLink>
       </li>
       {/* ----------------Products---------------- */}
@@ -35,36 +36,34 @@ function AsideAllMenus() {
             </span>
             <MdOutlineKeyboardArrowRight className="group-open:rotate-90 text-xl font-semibold text-textColor duration-common" />
           </summary>
-          <div className="">
-            <SingleNavLink
-              toLink="/products/blogs"
-              dropDown
-            >
-              <MdLibraryBooks className="text-lg" />
-              Blogs
-            </SingleNavLink>
-            <SingleNavLink
-              toLink="/products/tags"
-              dropDown
-            >
-              <IoMdPricetags className="text-lg" />
-              Tags
-            </SingleNavLink>
-            <SingleNavLink
-              toLink="/products/listing"
-              dropDown
-            >
-              <BsListUl className="text-lg" />
-              Listing
-            </SingleNavLink>
-          </div>
+          <SingleNavLink
+            toLink="/products/blogs"
+            dropDown
+          >
+            <MdLibraryBooks className="text-lg" />
+            Blogs
+          </SingleNavLink>
+          <SingleNavLink
+            toLink="/products/tags"
+            dropDown
+          >
+            <IoMdPricetags className="text-lg" />
+            Tags
+          </SingleNavLink>
+          <SingleNavLink
+            toLink="/products/listing"
+            dropDown
+          >
+            <BsListUl className="text-lg" />
+            Listing
+          </SingleNavLink>
         </details>
       </li>
       {/* ----------------Users---------------- */}
       <li className="">
         <details
           className="group"
-          open={currentRoute === '/users/gest-users' || currentRoute === '/users/developers'}
+          open={currentRoute === '/users/gest-users' || currentRoute === '/users/developers-users'}
         >
           <summary className="flex items-center justify-between border-l-[6px] border-secondary group-hover:border-blue group-hover:bg-blue/20 px-12 py-2 text-base text-textColor cursor-pointer">
             <span className="flex items-center gap-2 group-open:text-blue">
@@ -83,7 +82,7 @@ function AsideAllMenus() {
               Gest Users
             </SingleNavLink>
             <SingleNavLink
-              toLink="/developers"
+              toLink="/users/developers-users"
               dropDown
             >
               <FaKeyboard className="text-lg" />

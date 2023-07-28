@@ -1,23 +1,22 @@
-/* eslint-disable max-lines */
-import { CiImageOff } from 'react-icons/ci';
 import { HiOutlineEye } from 'react-icons/hi';
 import { RiDeleteBinLine } from 'react-icons/ri';
 import { Link } from 'react-router-dom';
 import SearchingInput from '../../../components/utils/ReUse/SearchingInput';
 import ShortingInput from '../../../components/utils/ReUse/ShortingInput';
 import TextDashboardSectionTitle from '../../../components/utils/ReUse/TextDashboardSectionTitle';
-import BlogsTablesHeader from './BlogsTablesHeader';
+import DeveloperUsersTableHeader from './DeveloperUsersTableHeader';
 
-function BlogsTable() {
+function DeveloperUsersTable() {
   const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
   return (
     <>
       <div className="flex items-center justify-between">
-        <TextDashboardSectionTitle>All Blogs Here</TextDashboardSectionTitle>
+        <TextDashboardSectionTitle>All Developer users Here</TextDashboardSectionTitle>
         <div className="flex items-center gap-2">
           <SearchingInput
-            id="blogs"
-            name="blogs"
+            id="listing"
+            name="listing"
+            // onChange={(e) => console.log(e.target.value)}
           />
           {/* <TagsShortingOption /> */}
           <ShortingInput />
@@ -26,7 +25,7 @@ function BlogsTable() {
       <div />
       <table className="w-full whitespace-nowrap text-gray">
         <thead>
-          <BlogsTablesHeader />
+          <DeveloperUsersTableHeader />
         </thead>
         <tbody className="h-20 overflow-y-auto">
           {array.map((user) => (
@@ -47,33 +46,20 @@ function BlogsTable() {
               </td>
               <td className="pl-4">
                 <div className="flex gap-2 items-center">
-                  <CiImageOff className="text-3xl fill-gray" />
-                </div>
-              </td>
-              <td className="pl-4">
-                <div className="flex gap-2 items-center">
                   <span
-                    // title={user.email}
+                    // title={`${user.firstName} ${' '} ${user.lastName}`}
                     className=" text-sm font-normal"
                   >
-                    done
+                    Mahabub Alam
                   </span>
                 </div>
               </td>
-              <td className="pl-12 text-sm font-normal">
+              <td className="pl-4">
                 <span
-                //   title={user.phoneNumber}
+                    // title={`${user.firstName} ${' '} ${user.lastName}`}
                   className=" text-sm font-normal"
                 >
-                  done
-                </span>
-              </td>
-              <td className="pl-12 text-sm font-normal">
-                <span
-                //   title={user.address}
-                  className=" text-sm font-normal"
-                >
-                  done
+                  rjmahabub543@gmail.com
                 </span>
               </td>
               <td className="pl-20 text-sm font-normal">
@@ -109,4 +95,4 @@ function BlogsTable() {
   );
 }
 
-export default BlogsTable;
+export default DeveloperUsersTable;

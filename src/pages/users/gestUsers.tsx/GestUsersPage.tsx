@@ -1,14 +1,14 @@
 import { useEffect } from 'react';
-import TagsTable from './TagsTable';
+import GestUsersTable from './GestUsersTable';
 
-function TagsPage() {
+function GestUsersPage() {
   useEffect(() => {
-    document.title = 'Tags';
+    document.title = 'Gest-Users';
   }, []);
   return (
     <>
       <div className="bg-secondary p-8 space-y-6">
-        <TagsTable />
+        <GestUsersTable />
       </div>
       <div>
         another section
@@ -17,4 +17,4 @@ function TagsPage() {
   );
 }
 
-export default TagsPage;
+export default GestUsersPage;
