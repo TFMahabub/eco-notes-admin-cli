@@ -1,16 +1,31 @@
 # Eco-Notes Admin Panel
 
+
+## All Files and Links 
+
+[eco-notes-project-manegment-docs](https://docs.google.com/document/d/1geAzLOs4qQl50mtPnQxGiDYWgMUyC7Ky4OwH7zmyNKo/edit).
+<br>
+[eco-notes-client-site-git-repo-link](https://github.com/TFMahabub/eco-notes).
+<br>
+[eco-notes-client-site-live-link](https://eco-notes.vercel.app/).
+<br>
+[eco-notes-server-site-git-repo-link](https://github.com/TFMahabub/eco-notes-server).
+<br>
+[admin-panel-link](https://eco-notes-admin-panel.netlify.app/).
+<br>
+[admin-panel-git-repo-link](https://github.com/TFMahabub/eco-notes-admin-cli).
+
 ## Description 
 
-Your GitHub profile is an extremely important aspect of your public identity as a developer. A well-crafted one allows you to show off your work to other developers as well as potential employers. An important component of your GitHub profile—and one that many new developers often overlook—is the README.md file.
+This is a simple admin panel for a blog posting web applications. I make this site with React.js. Admin can manege his web applications with this admin panel.
 
-The quality of a README often differentiates a good project from a bad project. A good one takes advantage of the opportunity to explain and showcase what your application does, justify the technologies used, and even talk about some of the challenges you faced and features you hope to implement in the future. A good README helps you stand out among the large crowd of developers putting their work on GitHub.
+1. In this admin panel admin can see all menus in aside bar.
 
-There's no one right way to structure a good README. There is one very wrong way, however, and that is to not include a README at all or to create a very anemic one. This guide outlines a few best practices. As you progress in your career, you will develop your own ideas about what makes a good README.
+2. In Dashboard menus the admin can see his whole applications condition with a beautiful interface.
 
-At a minimum, your project README needs a title and a short description explaining the what, why, and how. What was your motivation? Why did you build this project? (Note: The answer is not "Because it was a homework assignment.") What problem does it solve? What did you learn? What makes your project stand out?
+3. Porduct menu is a drop-down menus in this menus admin will see 3 option like: BLogs, Tags and Listing. Admin will see all Blogs, Tags and Listing in a table. Also he can short by name time and search the product.
 
-Lastly, if your project is deployed, include a link to the deployed application here.
+4. Users menu also a drop-down menus in this menus admin will see 2 types of users gest-users and developer users. Also he can short by name time and search the user.
 
 If you're new to Markdown, read the GitHub guide on [Mastering Markdown](https://guides.github.com/features/mastering-markdown/).
 
