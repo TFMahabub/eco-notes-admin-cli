@@ -27,25 +27,25 @@ This is a simple admin panel for a blog posting web applications. I make this si
 
 4. Users menu also a drop-down menus in this menus admin will see 2 types of users gest-users and developer users. Also he can short by name time and search the user.
 
-If you're new to Markdown, read the GitHub guide on [Mastering Markdown](https://guides.github.com/features/mastering-markdown/).
-
-If you need an example of a good README, check out [the VSCode repository](https://github.com/microsoft/vscode).
-
-
-## Table of Contents (Optional)
-
-If your README is very long, add a table of contents to make it easy for users to find what they need.
-
-* [Installation](#installation)
-* [Usage](#usage)
-* [Credits](#credits)
-* [License](#license)
-
 
 ## Installation
 
-What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
+At first clone the project:
+```code
+git clone https://github.com/TFMahabub/eco-notes-admin-cli.git
+```
 
+Then run this command to install all packages: 
+```code
+yarn
+```
+
+After that you can run this project with that:
+```code
+yarn dev
+```
+
+Finally Enjoy the project
 
 ## Usage 
 
