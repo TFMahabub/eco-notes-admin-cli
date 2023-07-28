@@ -1,11 +1,10 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 // eslint-disable-next-line import/no-extraneous-dependencies
 import logo from '../../../../public/logo-white.png';
-import { useAppDispatch, useAppSelector } from '../../../app/hook';
 
 function Navbar() {
-  const { expandAsideMenu } = useAppSelector((state) => state.navbar);
-  const dispatch = useAppDispatch();
+  // const { expandAsideMenu } = useAppSelector((state) => state.navbar);
+  // const dispatch = useAppDispatch();
   return (
     <div
       className="container flex items-center justify-between h-full"
