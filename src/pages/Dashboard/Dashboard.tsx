@@ -19,16 +19,11 @@ function Dashboard() {
         <TopBoxPart />
       </div>
       {/* --------------Chart-Part-------------- */}
-      <div className="flex items-center justify-between gap-common">
-        <div className="w-full bg-secondary p-common space-y-common">
-          <article className="text-start">
-            <TextDashboardSectionTitle>
-              This week blog post rate:
-            </TextDashboardSectionTitle>
-          </article>
+      <div className="grid grid-cols-12 lg:grid-cols-5 gap-partGap">
+        <div className="col-span-2 bg-secondary p-common">
           <ChartBlogPostRate />
         </div>
-        <div className="w-full bg-secondary">
+        <div className="col-span-3 bg-secondary p-common">
           <ChartBlogHighLikeCommentRate />
         </div>
       </div>

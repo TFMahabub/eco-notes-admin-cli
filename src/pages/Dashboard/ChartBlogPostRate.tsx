@@ -1,77 +1,53 @@
-// eslint-disable-next-line import/no-extraneous-dependencies
+/* eslint-disable import/no-extraneous-dependencies */
+// Import react-circular-progressbar module and styles
 import {
-  CartesianGrid,
-  Legend,
-  Line,
-  LineChart,
-  Tooltip,
-  XAxis,
-  YAxis,
-} from 'recharts';
+  CircularProgressbar,
+} from 'react-circular-progressbar';
+import 'react-circular-progressbar/dist/styles.css';
+import { MdOutlineKeyboardArrowDown, MdOutlineKeyboardArrowUp } from 'react-icons/md';
+import TextDashboardSectionTitle from '../../components/utils/ReUse/TextDashboardSectionTitle';
 
-const data = [
-  {
-    name: 'Page A',
-    uv: 4000,
-    pv: 2400,
-    amt: 2400,
-  },
-  {
-    name: 'Page B',
-    uv: 3000,
-    pv: 1398,
-    amt: 2210,
-  },
-  {
-    name: 'Page C',
-    uv: 2000,
-    pv: 9800,
-    amt: 2290,
-  },
-  {
-    name: 'Page D',
-    uv: 2780,
-    pv: 3908,
-    amt: 2000,
-  },
-  {
-    name: 'Page E',
-    uv: 1890,
-    pv: 4800,
-    amt: 2181,
-  },
-];
+const percentage = 66;
 
 function ChartBlogPostRate() {
   return (
-    <LineChart
-      width={500}
-      height={300}
-      data={data}
-      margin={{
-        top: 5,
-        right: 30,
-        left: 20,
-        bottom: 5,
-      }}
-    >
-      <CartesianGrid strokeDasharray="3 3" />
-      <XAxis dataKey="name" />
-      <YAxis />
-      <Tooltip />
-      <Legend />
-      <Line
-        type="monotone"
-        dataKey="pv"
-        stroke="#8884d8"
-        activeDot={{ r: 8 }}
+    <div className="space-y-6">
+      <article className="text-start">
+        <TextDashboardSectionTitle>
+          This Week Blog Post Rate:
+        </TextDashboardSectionTitle>
+      </article>
+      <CircularProgressbar
+        className="h-40"
+        value={percentage}
+        text={`${percentage}%`}
+        strokeWidth={6}
       />
-      <Line
-        type="monotone"
-        dataKey="uv"
-        stroke="#82ca9d"
-      />
-    </LineChart>
+      <div className="flex justify-between">
+        <div className="text-center">
+          <p className="text-textColor">Last Week</p>
+          <div className="flex items-center">
+            <MdOutlineKeyboardArrowUp className="text-2xl font-medium text-green" />
+            <p className="text-textColor">40%</p>
+          </div>
+        </div>
+        <div className="text-center">
+          <p className="text-textColor">Last Month</p>
+          <div className="flex items-center">
+            <MdOutlineKeyboardArrowUp className="text-2xl font-medium text-green" />
+            <p className="text-textColor">70%</p>
+          </div>
+        </div>
+        <div className="text-center">
+          <p className="text-textColor">Last 6 Month</p>
+          <div className="flex items-center">
+            <MdOutlineKeyboardArrowDown className="text-2xl font-medium text-error" />
+            <p className="text-textColor">-10%</p>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }
+
 export default ChartBlogPostRate;
