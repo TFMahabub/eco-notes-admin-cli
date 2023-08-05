@@ -8,7 +8,7 @@ export interface ModalState {
 
 const initialState: ModalState = {
   modalCondition: true,
-  modalType: 'action',
+  modalType: '',
 };
 
 export const modalSlice = createSlice({
@@ -20,7 +20,7 @@ export const modalSlice = createSlice({
       state.modalType = '';
     },
     setModalOpen: (state, { payload }) => {
-      state.modalCondition = false;
+      state.modalCondition = true;
       state.modalType = payload.modalType;
     },
   },
