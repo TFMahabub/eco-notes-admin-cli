@@ -7,6 +7,10 @@ function BlogsTablesHeader() {
       <th className="text-start text-textColor font-normal pl-4">
         Title
       </th>
+      <th className="text-start bg-gray-5 font-normal text-textColor pl-12">
+        {/* Location */}
+        Author
+      </th>
       <th className="text-start text-textColor font-normal pl-4">
         Post Time
       </th>

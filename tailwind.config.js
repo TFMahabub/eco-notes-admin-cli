@@ -17,6 +17,14 @@ export default {
       pink: '#E83E8C',
       orenge: '#ff7828',
       pruple: '#b464c8',
+      tag: {
+        react: '#00D9FE',
+        angular: '#E03537',
+        vue: '#47BA87',
+        express: '#868686',
+        node: '#87CF30',
+        mongoos: '#8C0808',
+      }
     },
     extend: {
       spacing: {

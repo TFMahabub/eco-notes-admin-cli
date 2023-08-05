@@ -1,27 +1,23 @@
 /* eslint-disable import/no-extraneous-dependencies */
-// Import react-circular-progressbar module and styles
-import {
-  CircularProgressbar,
-} from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import { MdOutlineKeyboardArrowDown, MdOutlineKeyboardArrowUp } from 'react-icons/md';
+import CircleChart from '../../components/shared/navbar/CirclePercentageChart';
 import TextDashboardSectionTitle from '../../components/utils/ReUse/TextDashboardSectionTitle';
 
-const percentage = 66;
+const percentage = 80;
 
 function ChartBlogPostRate() {
   return (
     <div className="space-y-6">
       <article className="text-start">
         <TextDashboardSectionTitle>
-          This Week Blog Post Rate:
+          This Week Blog Post Rate
         </TextDashboardSectionTitle>
       </article>
-      <CircularProgressbar
-        className="h-40"
+      <CircleChart
         value={percentage}
         text={`${percentage}%`}
-        strokeWidth={6}
+        strokeWidth={7}
       />
       <div className="flex justify-between">
         <div className="text-center">

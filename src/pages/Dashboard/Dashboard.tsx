@@ -11,19 +11,16 @@ function Dashboard() {
     document.title = 'Dashboard';
   }, []);
   return (
-    <section className="h-full space-y-partGap">
-      <head>
-        <title>Dashboard</title>
-      </head>
+    <section className="space-y-partGap">
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
         <TopBoxPart />
       </div>
       {/* --------------Chart-Part-------------- */}
-      <div className="grid grid-cols-12 lg:grid-cols-5 gap-partGap">
-        <div className="col-span-2 bg-secondary p-common">
+      <div className="grid grid-cols-5 gap-partGap">
+        <div className="col-span-5 lg:col-span-2 bg-secondary p-6">
           <ChartBlogPostRate />
         </div>
-        <div className="col-span-3 bg-secondary p-common">
+        <div className="col-span-5 lg:col-span-3 bg-secondary p-6">
           <ChartBlogHighLikeCommentRate />
         </div>
       </div>

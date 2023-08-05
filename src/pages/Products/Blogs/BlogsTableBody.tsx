@@ -1,8 +1,12 @@
+/* eslint-disable import/no-extraneous-dependencies */
+/* eslint-disable no-underscore-dangle */
+import moment from 'moment';
 import { HiOutlineEye } from 'react-icons/hi';
 import { RiDeleteBinLine } from 'react-icons/ri';
 import { Link } from 'react-router-dom';
+import { BLOGTYPE } from '../../../components/types/blogTypes';
 
-function BlogsTableBody({ blog }:any) {
+function BlogsTableBody({ blog }:{ blog: BLOGTYPE }) {
   return (
     <tr
       className="h-14 text-xs text-textColor bg-white even:bg-gray/5 hover:bg-gray-100 border-b border-gray/10 last-of-type:border-b-0"
@@ -20,16 +24,23 @@ function BlogsTableBody({ blog }:any) {
           title={blog?.title}
           className=" text-sm font-normal"
         >
-          {blog?.title.length > 40 ? `${blog?.title.slice(0, 40)}...` : blog?.title}
+          {blog?.title.length > 24 ? `${blog?.title.slice(0, 24)}...` : blog?.title}
+        </span>
+      </td>
+      <td className="pl-12 text-sm font-normal">
+        <span
+          title={toString(blog?.uid)}
+          className=" text-sm font-normal"
+        >
+          {blog?.uid}
         </span>
       </td>
       <td className="pl-4 text-sm font-normal">
         <span
-                //   title={user.phoneNumber}
+          title={blog?.postTime}
           className=" text-sm font-normal"
         >
-          {blog?.postTime}
-          12: 45, 12/12/2023
+          {moment(blog?.postTime).format('LLL')}
         </span>
       </td>
       <td className="pl-16 text-sm font-normal">

@@ -1,5 +1,6 @@
 /* eslint-disable no-underscore-dangle */
 /* eslint-disable max-lines */
+import { BLOGTYPE } from '../../../components/types/blogTypes';
 import DataNotFound from '../../../components/utils/ReUse/DataNotFound';
 import { LoadingSpinner } from '../../../components/utils/ReUse/LoadingSpinner';
 import SearchingInput from '../../../components/utils/ReUse/SearchingInput';
@@ -26,7 +27,12 @@ function BlogsTable() {
           <BlogsTablesHeader />
         </thead>
         <tbody className="h-20 overflow-y-auto">
-          {allBlogs?.map((blog:any) => <BlogsTableBody key={blog?._id} blog={blog} />)}
+          {allBlogs?.map((blog:BLOGTYPE) => (
+            <BlogsTableBody
+              key={blog?._id}
+              blog={blog}
+            />
+          ))}
         </tbody>
       </table>
     );
