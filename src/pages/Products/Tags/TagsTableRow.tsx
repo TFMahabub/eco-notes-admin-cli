@@ -1,9 +1,13 @@
 /* eslint-disable no-underscore-dangle */
 import { RiAddFill, RiDeleteBinLine, RiEditBoxLine } from 'react-icons/ri';
+import { useAppDispatch } from '../../../app/hook';
 import { useTagsColor } from '../../../components/hook/useTagsColor';
 import { TAGTYPE } from '../../../components/types/tagType';
+import { setModalOpen } from '../../../feauters/modal/modalSlice';
 
 function TagsTableRow({ tag }:{ tag:TAGTYPE }) {
+  const dispatch = useAppDispatch();
+
   const tagColor = useTagsColor(tag?.tag);
   return (
     <tr
@@ -48,6 +52,13 @@ function TagsTableRow({ tag }:{ tag:TAGTYPE }) {
             />
           </button>
           <button
+            onClick={() => (
+              dispatch(
+                setModalOpen(
+                  { modalType: 'tag-edit' },
+                ),
+              )
+            )}
             title="Edit"
             type="button"
             className="flex items-center justify-center text-md h-8 w-8 rounded-md text-orenge bg-orenge/10 cursor-pointer hover:bg-orenge/20"
@@ -57,6 +68,13 @@ function TagsTableRow({ tag }:{ tag:TAGTYPE }) {
             />
           </button>
           <button
+            onClick={() => (
+              dispatch(
+                setModalOpen(
+                  { modalType: 'tag-create' },
+                ),
+              )
+            )}
             title="Create"
             type="button"
             className="flex items-center justify-center text-md h-8 w-8 rounded-md text-green bg-green/10 cursor-pointer hover:bg-green/20"
