@@ -1,21 +1,22 @@
 import { RiAddFill, RiDeleteBinLine, RiEditBoxLine } from 'react-icons/ri';
 import { useDispatch } from 'react-redux';
 import { setModalOpen } from '../../feauters/modal/modalSlice';
+import { TAGCOLORTYPE } from '../types/tagColorType';
 
-function ColorCart() {
+function ColorCart({ color }:{ color:TAGCOLORTYPE }) {
   const dispatch = useDispatch();
   return (
     <div
-      className="h-16 w-full bg-green rounded-md flex flex-wrap items-center justify-center gap-2 group transition-all transform duration-common text-secondary"
+      className="flex flex-wrap items-center justify-center w-full h-16 gap-2 transition-all transform rounded-md bg-green group duration-common text-secondary"
     >
       <button type="button" className="hidden group-hover:block">
         <RiDeleteBinLine
-          className="text-xl hover:scale-110 duration-100"
+          className="text-xl duration-100 hover:scale-110"
         />
       </button>
       <button type="button" className="hidden group-hover:block">
         <RiEditBoxLine
-          className="text-xl hover:scale-110 duration-100"
+          className="text-xl duration-100 hover:scale-110"
         />
       </button>
       <button
@@ -24,7 +25,7 @@ function ColorCart() {
         className="hidden group-hover:block"
       >
         <RiAddFill
-          className="text-2xl hover:scale-110 duration-100"
+          className="text-2xl duration-100 hover:scale-110"
         />
       </button>
     </div>

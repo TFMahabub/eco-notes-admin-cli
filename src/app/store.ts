@@ -1,4 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit';
+import tagColorReducer from '../feauters/Tags/tagColorApi';
 import { api } from '../feauters/api/apiSlice';
 import modalReducer from '../feauters/modal/modalSlice';
 import navbarSliceReducer from '../feauters/navbar/navbarSlice';
@@ -7,6 +8,7 @@ export const store = configureStore({
   reducer: {
     navbar: navbarSliceReducer,
     modal: modalReducer,
+    tagColor: tagColorReducer,
     [api.reducerPath]: api.reducer,
   },
   middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(api.middleware),

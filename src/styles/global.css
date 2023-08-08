@@ -63,7 +63,7 @@ body {
     @apply flex justify-center;
   }
   .box-area {
-    @apply p-4 border border-gray/40 bg-white rounded-lg;
+    @apply p-4 bg-white border rounded-lg border-gray/40;
   }
   .Heading-clamp {
     display: -webkit-box;

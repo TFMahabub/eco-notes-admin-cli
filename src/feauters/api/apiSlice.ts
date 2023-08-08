@@ -6,6 +6,6 @@ export const api = createApi({
   baseQuery: fetchBaseQuery({
     baseUrl: 'https://eco-notes-server-site.vercel.app',
   }),
-  tagTypes: ['blog', 'tag'],
+  tagTypes: ['blog', 'tag', 'tagColor'],
   endpoints: () => ({}),
 });
