@@ -4,8 +4,9 @@ import { useAppSelector } from '../app/hook';
 import { RootState } from '../app/store';
 import EditTagModal from '../components/modal/EditTagModal';
 import MediumModal from '../components/modal/MediumModal';
-import PostTagModal from '../components/modal/PostTagModal';
 import SmallModal from '../components/modal/SmallModal';
+import TagColorModal from '../components/modal/TagColorModal';
+import TagPostModal from '../components/modal/TagPostModal';
 import Navbar from '../components/shared/navbar/Navbar';
 import AsideAllMenus from '../pages/aside/AsideAllMenus';
 
@@ -32,7 +33,7 @@ function DashboardLayouts() {
 
       {modalType === 'tag-post' && modalCondition && (
         <MediumModal modalTitle="Tag Create Form">
-          <PostTagModal />
+          <TagPostModal />
         </MediumModal>
       )}
 
@@ -44,7 +45,7 @@ function DashboardLayouts() {
 
       {modalType === 'tag-color-add' && modalCondition && (
         <SmallModal modalTitle="Tag Color Add">
-          this is tag color
+          <TagColorModal />
         </SmallModal>
       )}
 

@@ -7,7 +7,7 @@ interface IFormInput {
   name: string
 }
 
-function PostTagModal() {
+function TagPostModal() {
   // const [postTag, { isSuccess, isLoading, isError }] = usePostSingleTagMutation();
 
   const { register, handleSubmit, formState: { errors } } = useForm<IFormInput>();
@@ -51,4 +51,4 @@ function PostTagModal() {
   );
 }
 
-export default PostTagModal;
+export default TagPostModal;
