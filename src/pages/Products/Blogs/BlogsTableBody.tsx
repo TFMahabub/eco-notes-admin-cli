@@ -9,7 +9,7 @@ import { BLOGTYPE } from '../../../components/types/blogTypes';
 function BlogsTableBody({ blog }:{ blog: BLOGTYPE }) {
   return (
     <tr
-      className="h-14 text-xs text-textColor bg-white even:bg-gray/5 hover:bg-gray-100 border-b border-gray/10 last-of-type:border-b-0"
+      className="h-14 text-xs text-textColor bg-white even:bg-gray/5 hover:bg-gray-100 border-b border-borderColor last-of-type:border-b-0"
     >
       <td className="pl-4">
         <span
@@ -29,7 +29,7 @@ function BlogsTableBody({ blog }:{ blog: BLOGTYPE }) {
       </td>
       <td className="pl-12 text-sm font-normal">
         <span
-          title={toString(blog?.uid)}
+          title={blog?.uid?.toString()}
           className=" text-sm font-normal"
         >
           {blog?.uid}

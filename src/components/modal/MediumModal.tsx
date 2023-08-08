@@ -16,14 +16,12 @@ function MediumModal({ modalTitle, children }: PropsType) {
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.2 }}
-        className="h-[85vh] aspect-[2/1] bg-secondary rounded-md overflow-y-auto scroll-hidden"
+        className="h-[85vh] aspect-[2/1] bg-secondary rounded-md relative overflow-y-auto scroll-hidden"
       >
         <ModalHeader
           modalTitle={modalTitle}
         />
-        <div className="px-8 py-2">
-          {children}
-        </div>
+        {children}
       </motion.div>
     </section>
   );

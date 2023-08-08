@@ -10,6 +10,7 @@ export default {
       textColor: '#707676',
       headingTextColor: '#2c2c2c',
       gray:'#707676',
+      borderColor: '#dfdfdf',
       lightGray: '#f1f1f1',
       error: '#EA5252',
       blue: '#6571FF',
@@ -31,7 +32,7 @@ export default {
         common: '16px',
         common_75: '18px',
         partGap: '25px',
-        sectionGap: '45px',
+        sectionGap: '18px',
         navbarHeight: '4rem'
       },
       transitionDuration: {

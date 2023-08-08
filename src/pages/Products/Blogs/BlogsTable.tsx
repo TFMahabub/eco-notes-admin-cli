@@ -22,8 +22,8 @@ function BlogsTable() {
   }
   if (allBlogs && !isLoading && !error) {
     content = (
-      <table className="w-full whitespace-nowrap text-gray">
-        <thead>
+      <table className="w-full whitespace-nowrap text-gray border border-borderColor rounded-lg">
+        <thead className="border-b border-borderColor">
           <BlogsTablesHeader />
         </thead>
         <tbody className="h-20 overflow-y-auto">

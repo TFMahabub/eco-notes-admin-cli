@@ -56,7 +56,7 @@ function RecentBlogTable() {
               </td>
               <td className="pl-12 text-sm font-normal">
                 <span
-                  title={toString(blog?.uid)}
+                  title={blog?.uid?.toString()}
                   className=" text-sm font-normal"
                 >
                   {blog?.uid}

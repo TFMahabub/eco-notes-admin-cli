@@ -4,11 +4,34 @@ const TagsApi = api.injectEndpoints({
   endpoints: (builder) => ({
     getAllTags: builder.query({
       query: () => '/all-tags',
+      providesTags: ['tag'],
     }),
     getSingleTags: builder.query({
       query: (id) => `/single-tag/${id}`,
+      providesTags: ['tag'],
+    }),
+    deleteSingleTag: builder.mutation({
+      query(id) {
+        return {
+          url: `/delete-tag/${id}`,
+          method: 'DELETE',
+        };
+      },
+      invalidatesTags: ['tag'],
+    }),
+    postSingleTag: builder.mutation({
+      query(tagProduct) {
+        return {
+          url: '/post-tag',
+          method: 'POST',
+          body: JSON.stringify(tagProduct),
+        };
+      },
+      invalidatesTags: ['tag'],
     }),
   }),
 });
 
-export const { useGetAllTagsQuery, useGetSingleTagsQuery } = TagsApi;
+export const {
+  useGetAllTagsQuery, useGetSingleTagsQuery, useDeleteSingleTagMutation, usePostSingleTagMutation,
+} = TagsApi;

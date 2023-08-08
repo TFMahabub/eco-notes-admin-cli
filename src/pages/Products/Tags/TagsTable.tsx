@@ -22,8 +22,8 @@ function TagsTable() {
   }
   if (allTags && !isLoading && !error) {
     content = (
-      <table className="w-full whitespace-nowrap text-gray">
-        <thead>
+      <table className="w-full whitespace-nowrap text-gray border border-borderColor">
+        <thead className="border-b border-borderColor">
           <TagsTableHeader />
         </thead>
         <tbody className="h-20 overflow-y-auto">
@@ -49,7 +49,6 @@ function TagsTable() {
           <ShortingInput />
         </div>
       </div>
-      <div />
       {content}
     </>
   );
