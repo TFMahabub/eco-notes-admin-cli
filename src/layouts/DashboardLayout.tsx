@@ -1,8 +1,16 @@
+/* eslint-disable @typescript-eslint/no-use-before-define */
 import { Outlet } from 'react-router-dom';
+import { useAppSelector } from '../app/hook';
+import { RootState } from '../app/store';
+import EditTagModal from '../components/modal/EditTagModal';
+import MediumModal from '../components/modal/MediumModal';
+import PostTagModal from '../components/modal/PostTagModal';
 import Navbar from '../components/shared/navbar/Navbar';
 import AsideAllMenus from '../pages/aside/AsideAllMenus';
 
 function DashboardLayouts() {
+  const { modalCondition, modalType } = useAppSelector((state: RootState) => state.modal);
+
   return (
     <section className="relative">
       <nav className="absolute w-full top-0 bg-primary h-14">
@@ -20,6 +28,19 @@ function DashboardLayouts() {
           <Outlet />
         </main>
       </section>
+
+      {modalType === 'tag-post' && modalCondition && (
+        <MediumModal modalTitle="Tag Create Form">
+          <PostTagModal />
+        </MediumModal>
+      )}
+
+      {modalType === 'tag-edit' && modalCondition && (
+        <MediumModal modalTitle="Tag Edit Form">
+          <EditTagModal />
+        </MediumModal>
+      )}
+
     </section>
   );
 }

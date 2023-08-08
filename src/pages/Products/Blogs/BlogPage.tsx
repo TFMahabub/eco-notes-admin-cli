@@ -6,14 +6,9 @@ function BlogsPage() {
     document.title = 'Blogs';
   }, []);
   return (
-    <>
-      <div className="bg-secondary p-8 space-y-6 rounded-md">
-        <BlogsTable />
-      </div>
-      <div>
-        another section
-      </div>
-    </>
+    <div className="bg-secondary p-8 space-y-6 rounded-md">
+      <BlogsTable />
+    </div>
   );
 }
 

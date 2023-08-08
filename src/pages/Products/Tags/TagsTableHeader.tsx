@@ -4,10 +4,10 @@ function TagsTableHeader() {
       <th className="text-start text-textColor font-normal pl-4">
         Tags Id
       </th>
-      <th className="text-start text-textColor font-normal pl-4">
+      <th className="text-start text-textColor font-normal pl-24">
         Name
       </th>
-      <th className="text-start text-textColor font-normal pl-4">
+      <th className="text-start text-textColor font-normal pl-24">
         Color
       </th>
       <th className="text-start text-textColor font-normal pl-24">

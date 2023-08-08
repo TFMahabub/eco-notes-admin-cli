@@ -1,14 +1,42 @@
+/* eslint-disable no-underscore-dangle */
 /* eslint-disable max-lines */
-import { HiOutlineEye } from 'react-icons/hi';
-import { RiDeleteBinLine } from 'react-icons/ri';
-import { Link } from 'react-router-dom';
+import { TAGTYPE } from '../../../components/types/tagType';
+import DataNotFound from '../../../components/utils/ReUse/DataNotFound';
+import { LoadingSpinner } from '../../../components/utils/ReUse/LoadingSpinner';
 import SearchingInput from '../../../components/utils/ReUse/SearchingInput';
 import ShortingInput from '../../../components/utils/ReUse/ShortingInput';
 import TextDashboardSectionTitle from '../../../components/utils/ReUse/TextDashboardSectionTitle';
+import { useGetAllTagsQuery } from '../../../feauters/Tags/TagsApi';
 import TagsTableHeader from './TagsTableHeader';
+import TagsTableRow from './TagsTableRow';
 
 function TagsTable() {
-  const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
+  const { data: allTags, isLoading, error } = useGetAllTagsQuery(undefined);
+
+  let content;
+  if (isLoading && !error) {
+    content = <section className="flex items-center justify-center"><LoadingSpinner /></section>;
+  }
+  if (!isLoading && error) {
+    content = <DataNotFound />;
+  }
+  if (allTags && !isLoading && !error) {
+    content = (
+      <table className="w-full whitespace-nowrap text-gray border border-borderColor">
+        <thead className="border-b border-borderColor">
+          <TagsTableHeader />
+        </thead>
+        <tbody className="h-20 overflow-y-auto">
+          {allTags?.map((tag:TAGTYPE) => (
+            <TagsTableRow
+              key={tag?._id}
+              tag={tag}
+            />
+          ))}
+        </tbody>
+      </table>
+    );
+  }
   return (
     <>
       <div className="flex items-center justify-between">
@@ -18,74 +46,10 @@ function TagsTable() {
             id="tags"
             name="tags"
           />
-          {/* <TagsShortingOption /> */}
           <ShortingInput />
         </div>
       </div>
-      <div />
-      <table className="w-full whitespace-nowrap text-gray">
-        <thead>
-          <TagsTableHeader />
-        </thead>
-        <tbody className="h-20 overflow-y-auto">
-          {array.map((user) => (
-            <tr
-              key={user}
-              id="tr"
-              className="h-14 text-xs text-textColor bg-white even:bg-gray/5 hover:bg-gray-100 border-b border-gray/10 last-of-type:border-b-0"
-            >
-              <td className="pl-4">
-                <div className="flex gap-2 items-center">
-                  <span
-                    // title={`${user.firstName} ${' '} ${user.lastName}`}
-                    className=" text-sm font-normal"
-                  >
-                    64b45062bef1a756372e4c14
-                  </span>
-                </div>
-              </td>
-              <td className="pl-4">
-                <div className="flex gap-2 items-center">
-                  <span
-                    // title={`${user.firstName} ${' '} ${user.lastName}`}
-                    className=" text-sm font-normal"
-                  >
-                    React.js
-                  </span>
-                </div>
-              </td>
-              <td className="pl-4">
-                <div className="h-6 w-8 bg-blue rounded-sm" />
-              </td>
-              <td className="pl-20 text-sm font-normal">
-                <div
-                  className="flex gap-2 items-center"
-                >
-                  <button
-                    title="Delete"
-                    type="button"
-                    // onClick={() => dispatch(removeUserInfo(user.id))}
-                    className="flex items-center gap-1 text-md px-2 rounded-md py-[6px] text-error bg-error/10 cursor-pointer hover:bg-error/20"
-                  >
-                    <RiDeleteBinLine
-                      className="text-xl"
-                    />
-                  </button>
-                  <Link
-                    to="/"
-                    title="Watch"
-                    className="flex items-center gap-1 text-md px-2 rounded-md py-[6px] text-green bg-green/10 cursor-pointer hover:bg-green/20"
-                  >
-                    <HiOutlineEye
-                      className="text-xl"
-                    />
-                  </Link>
-                </div>
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+      {content}
     </>
   );
 }
