@@ -5,6 +5,7 @@ import { RootState } from '../app/store';
 import EditTagModal from '../components/modal/EditTagModal';
 import MediumModal from '../components/modal/MediumModal';
 import PostTagModal from '../components/modal/PostTagModal';
+import SmallModal from '../components/modal/SmallModal';
 import Navbar from '../components/shared/navbar/Navbar';
 import AsideAllMenus from '../pages/aside/AsideAllMenus';
 
@@ -39,6 +40,12 @@ function DashboardLayouts() {
         <MediumModal modalTitle="Tag Edit Form">
           <EditTagModal />
         </MediumModal>
+      )}
+
+      {modalType === 'tag-color-add' && modalCondition && (
+        <SmallModal modalTitle="Tag Color Add">
+          this is tag color
+        </SmallModal>
       )}
 
     </section>
