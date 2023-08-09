@@ -1,9 +1,10 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import { useEffect } from 'react';
 import { toast } from 'react-hot-toast';
-import { RiAddFill, RiDeleteBinLine, RiEditBoxLine } from 'react-icons/ri';
 import Swal from 'sweetalert2';
 import { useAppDispatch } from '../../../app/hook';
+import ButtonDelete from '../../../components/utils/ReUse/ButtonDelete';
+import ButtonEdit from '../../../components/utils/ReUse/ButtonEdit';
 import { useDeleteSingleTagMutation } from '../../../feauters/Tags/TagsApi';
 import { setModalOpen } from '../../../feauters/modal/modalSlice';
 
@@ -35,17 +36,10 @@ function ActionButtons({ tagID }:{ tagID:string }) {
 
   return (
     <>
-      <button
-        title="Delete"
-        type="button"
+      <ButtonDelete
         onClick={() => handleDelete(tagID)}
-        className="flex items-center justify-center text-md h-8 w-8 rounded-md text-error bg-error/10 cursor-pointer hover:bg-error/20"
-      >
-        <RiDeleteBinLine
-          className="text-xl"
-        />
-      </button>
-      <button
+      />
+      <ButtonEdit
         onClick={() => (
           dispatch(
             setModalOpen(
@@ -53,30 +47,7 @@ function ActionButtons({ tagID }:{ tagID:string }) {
             ),
           )
         )}
-        title="Edit"
-        type="button"
-        className="flex items-center justify-center text-md h-8 w-8 rounded-md text-orenge bg-orenge/10 cursor-pointer hover:bg-orenge/20"
-      >
-        <RiEditBoxLine
-          className="text-xl"
-        />
-      </button>
-      <button
-        onClick={() => (
-          dispatch(
-            setModalOpen(
-              { modalType: 'tag-post' },
-            ),
-          )
-        )}
-        title="Create"
-        type="button"
-        className="flex items-center justify-center text-md h-8 w-8 rounded-md text-green bg-green/10 cursor-pointer hover:bg-green/20"
-      >
-        <RiAddFill
-          className="text-2xl"
-        />
-      </button>
+      />
     </>
   );
 }

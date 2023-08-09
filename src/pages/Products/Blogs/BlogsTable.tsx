@@ -1,7 +1,7 @@
 /* eslint-disable no-underscore-dangle */
 /* eslint-disable max-lines */
 import { BLOGTYPE } from '../../../components/types/blogTypes';
-import DataNotFound from '../../../components/utils/ReUse/DataNotFound';
+import ErrorText from '../../../components/utils/ReUse/ErrorText';
 import { LoadingSpinner } from '../../../components/utils/ReUse/LoadingSpinner';
 import SearchingInput from '../../../components/utils/ReUse/SearchingInput';
 import ShortingInput from '../../../components/utils/ReUse/ShortingInput';
@@ -18,11 +18,11 @@ function BlogsTable() {
     content = <section className="flex items-center justify-center"><LoadingSpinner /></section>;
   }
   if (!isLoading && error) {
-    content = <DataNotFound />;
+    content = <ErrorText />;
   }
   if (allBlogs && !isLoading && !error) {
     content = (
-      <table className="w-full whitespace-nowrap text-gray border border-borderColor rounded-lg">
+      <table className="w-full border rounded-lg whitespace-nowrap text-gray border-borderColor">
         <thead className="border-b border-borderColor">
           <BlogsTablesHeader />
         </thead>

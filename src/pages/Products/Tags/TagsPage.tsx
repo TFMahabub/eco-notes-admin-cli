@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import ColorsSections from './ColorsSections';
-import TagsTable from './TagsTable';
+import TagTableDataCondition from './TagTableDataCondition';
 
 function TagsPage() {
   useEffect(() => {
@@ -8,10 +8,10 @@ function TagsPage() {
   }, []);
   return (
     <section className="space-y-common_75">
-      <div className="bg-secondary p-8 space-y-6">
-        <TagsTable />
+      <div className="p-8 space-y-6 bg-secondary">
+        <TagTableDataCondition />
       </div>
-      <div className="bg-secondary p-8 space-y-6">
+      <div className="p-8 space-y-6 bg-secondary">
         <ColorsSections />
       </div>
     </section>

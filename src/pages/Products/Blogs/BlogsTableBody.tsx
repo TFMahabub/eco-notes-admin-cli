@@ -1,12 +1,13 @@
 /* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable no-underscore-dangle */
 import moment from 'moment';
-import { HiOutlineEye } from 'react-icons/hi';
-import { RiDeleteBinLine } from 'react-icons/ri';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { BLOGTYPE } from '../../../components/types/blogTypes';
+import ButtonDelete from '../../../components/utils/ReUse/ButtonDelete';
+import ButtonWatch from '../../../components/utils/ReUse/ButtonWatch';
 
 function BlogsTableBody({ blog }:{ blog: BLOGTYPE }) {
+  const navigate = useNavigate();
   return (
     <tr
       className="h-14 text-xs text-textColor bg-white even:bg-gray/5 hover:bg-gray-100 border-b border-borderColor last-of-type:border-b-0"
@@ -47,25 +48,12 @@ function BlogsTableBody({ blog }:{ blog: BLOGTYPE }) {
         <div
           className="flex gap-2 items-center"
         >
-          <button
-            title="Delete"
-            type="button"
-                    // onClick={() => dispatch(removeUserInfo(user.id))}
-            className="flex items-center gap-1 text-md px-2 rounded-md py-[6px] text-error bg-error/10 cursor-pointer hover:bg-error/20"
-          >
-            <RiDeleteBinLine
-              className="text-xl"
-            />
-          </button>
-          <Link
-            to="/"
-            title="Watch"
-            className="flex items-center gap-1 text-md px-2 rounded-md py-[6px] text-green bg-green/10 cursor-pointer hover:bg-green/20"
-          >
-            <HiOutlineEye
-              className="text-xl"
-            />
-          </Link>
+          <ButtonDelete />
+          <ButtonWatch
+            onClick={() => {
+              navigate('/');
+            }}
+          />
         </div>
       </td>
     </tr>

@@ -6,7 +6,7 @@ import { HiOutlineEye } from 'react-icons/hi';
 import { RiDeleteBinLine } from 'react-icons/ri';
 import { Link } from 'react-router-dom';
 import { BLOGTYPE } from '../../components/types/blogTypes';
-import DataNotFound from '../../components/utils/ReUse/DataNotFound';
+import ErrorText from '../../components/utils/ReUse/ErrorText';
 import { LoadingSpinner } from '../../components/utils/ReUse/LoadingSpinner';
 import { useGetBlogsQuery } from '../../feauters/blog/blogApi';
 import RecentBlogTableHeader from './RecentBlogTableHeader';
@@ -19,7 +19,7 @@ function RecentBlogTable() {
     content = <section className="flex items-center justify-center"><LoadingSpinner /></section>;
   }
   if (!isLoading && error) {
-    content = <DataNotFound />;
+    content = <ErrorText />;
   }
   if (allBlogs && !isLoading && !error) {
     content = (
@@ -32,23 +32,23 @@ function RecentBlogTable() {
             <tr
               key={blog?._id}
               id="tr"
-              className="h-14 text-xs text-textColor bg-white border-b border-gray/10 even:bg-gray/5 last-of-type:border-b-0"
+              className="text-xs bg-white border-b h-14 text-textColor border-borderColor/10 even:bg-gray/5 last-of-type:border-b-0"
             >
               <td className="pl-4">
-                <div className="flex gap-2 items-center">
+                <div className="flex items-center gap-2">
                   <span
                     title={blog?._id}
-                    className=" text-sm font-normal"
+                    className="text-sm font-normal "
                   >
                     {blog?._id?.length > 24 ? blog?._id?.slice(0, 24) : blog?._id}
                   </span>
                 </div>
               </td>
               <td className="pl-4">
-                <div className="flex gap-2 items-center">
+                <div className="flex items-center gap-2">
                   <span
                     title={blog?.title}
-                    className=" text-sm font-normal"
+                    className="text-sm font-normal "
                   >
                     {blog?.title?.length > 24 ? blog?.title?.slice(0, 24) : blog?.title}
                   </span>
@@ -57,7 +57,7 @@ function RecentBlogTable() {
               <td className="pl-12 text-sm font-normal">
                 <span
                   title={blog?.uid?.toString()}
-                  className=" text-sm font-normal"
+                  className="text-sm font-normal "
                 >
                   {blog?.uid}
                 </span>
@@ -65,14 +65,14 @@ function RecentBlogTable() {
               <td className="pl-12 text-sm font-normal">
                 <span
                   title={moment(blog?.postTime).format('LLL')}
-                  className=" text-sm font-normal"
+                  className="text-sm font-normal "
                 >
                   {moment(blog?.postTime).format('LLL')}
                 </span>
               </td>
               <td className="pl-20 text-sm font-normal">
                 <div
-                  className="flex gap-2 items-center"
+                  className="flex items-center gap-2"
                 >
                   <button
                     type="button"
