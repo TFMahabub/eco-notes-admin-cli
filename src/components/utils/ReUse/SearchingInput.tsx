@@ -11,7 +11,7 @@ function SearchingInput(
         // eslint-disable-next-line react/jsx-props-no-spreading
         {...Attribute}
         placeholder="Search..."
-        className="border border-gray/60 focus:border-green/60 rounded-md h-9 px-4 w-60 focus:outline-none right-0 text-textColor"
+        className="right-0 px-4 border rounded-md border-borderColor focus:border-green/60 h-9 w-60 focus:outline-none text-textColor placeholder:text-textColor"
       />
     </label>
   );

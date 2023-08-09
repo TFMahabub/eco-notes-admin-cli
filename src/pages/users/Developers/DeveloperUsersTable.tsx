@@ -32,7 +32,7 @@ function DeveloperUsersTable() {
             <tr
               key={user}
               id="tr"
-              className="h-14 text-xs text-textColor bg-white even:bg-gray/5 hover:bg-gray-100 border-b border-gray/10 last-of-type:border-b-0"
+              className="h-14 text-xs text-textColor bg-white even:bg-gray/5 hover:bg-gray-100 border-b border-borderColor/10 last-of-type:border-b-0"
             >
               <td className="pl-4">
                 <div className="flex gap-2 items-center">

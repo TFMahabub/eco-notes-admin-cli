@@ -1,5 +1,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import { SubmitHandler, useForm } from 'react-hook-form';
+import { usePostSingleTagMutation } from '../../feauters/Tags/TagsApi';
+import useHotToast from '../hook/useHotToast';
 import PrimaryButton from '../utils/ReUse/PrimaryButton';
 import PrimaryInput from '../utils/ReUse/PrimaryInput';
 
@@ -8,10 +10,21 @@ interface IFormInput {
 }
 
 function TagPostModal() {
-  // const [postTag, { isSuccess, isLoading, isError }] = usePostSingleTagMutation();
+  const [postTag, { isSuccess, isLoading, error }] = usePostSingleTagMutation();
+
+  useHotToast({
+    isLoading, isSuccess, error, itemName: 'tag',
+  });
 
   const { register, handleSubmit, formState: { errors } } = useForm<IFormInput>();
-  const onSubmit: SubmitHandler<IFormInput> = () => {};
+  const onSubmit: SubmitHandler<IFormInput> = (inpurdata) => {
+    const data = {
+      ...inpurdata,
+      postAt: new Date().toDateString(),
+    };
+    postTag(JSON.stringify(data));
+    console.log(inpurdata);
+  };
 
   return (
     <section
@@ -29,16 +42,19 @@ function TagPostModal() {
           name="tagName"
           lable="Tag Name"
           register={register}
-          errorCondition={{ required: true }}
+          errorCondition={{ required: true, maxLength: 20 }}
+          maxLengthText="max length is 20"
           error={errors}
         />
         <PrimaryInput
           type="text"
-          id="color"
-          name="color"
-          lable="Color Name"
+          id="colorCode"
+          name="colorCode"
+          lable="Color Code"
           register={register}
-          errorCondition={{ required: true, maxLength: 5 }}
+          errorCondition={{ required: true, minLength: 7, maxLength: 7 }}
+          maxLengthText="only 7 carecter is accepted"
+          minLengthText="only 7 carecter is accepted"
           error={errors}
         />
         <PrimaryButton

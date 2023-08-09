@@ -3,7 +3,6 @@ import { useEffect } from 'react';
 import { toast } from 'react-hot-toast';
 import Swal from 'sweetalert2';
 import { useAppDispatch } from '../../../app/hook';
-import ButtonCreate from '../../../components/utils/ReUse/ButtonCreate';
 import ButtonDelete from '../../../components/utils/ReUse/ButtonDelete';
 import ButtonEdit from '../../../components/utils/ReUse/ButtonEdit';
 import { useDeleteSingleTagMutation } from '../../../feauters/Tags/TagsApi';
@@ -45,15 +44,6 @@ function ActionButtons({ tagID }:{ tagID:string }) {
           dispatch(
             setModalOpen(
               { modalType: 'tag-edit' },
-            ),
-          )
-        )}
-      />
-      <ButtonCreate
-        onClick={() => (
-          dispatch(
-            setModalOpen(
-              { modalType: 'tag-post' },
             ),
           )
         )}

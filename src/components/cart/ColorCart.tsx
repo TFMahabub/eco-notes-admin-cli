@@ -1,33 +1,46 @@
-import { RiAddFill, RiDeleteBinLine, RiEditBoxLine } from 'react-icons/ri';
+/* eslint-disable no-underscore-dangle */
+import { RxCross2 } from 'react-icons/rx';
 import { useDispatch } from 'react-redux';
-import { setModalOpen } from '../../feauters/modal/modalSlice';
+import { useDeleteSingleTagColorMutation } from '../../feauters/Tags/tagColorApi';
+import useHotToast from '../hook/useHotToast';
 import { TAGCOLORTYPE } from '../types/tagColorType';
+import { LoadingSpinner } from '../utils/ReUse/LoadingSpinner';
 
 function ColorCart({ color }:{ color:TAGCOLORTYPE }) {
-  const dispatch = useDispatch();
+  const [deleteTagColor, { isLoading, error, isSuccess }] = useDeleteSingleTagColorMutation();
+
+  const dispatch = useDispatch<any>();
+  useHotToast({
+    isLoading, isSuccess, error, itemName: 'Color',
+  });
+
   return (
     <div
-      className="flex flex-wrap items-center justify-center w-full h-16 gap-2 transition-all transform rounded-md bg-green group duration-common text-secondary"
+      className="relative flex flex-wrap items-center justify-center w-full h-16 gap-2 transition-all transform rounded-md group duration-common text-secondary"
+      style={{ backgroundColor: `${color?.color?.bg}` }}
     >
-      <button type="button" className="hidden group-hover:block">
-        <RiDeleteBinLine
-          className="text-xl duration-100 hover:scale-110"
-        />
-      </button>
-      <button type="button" className="hidden group-hover:block">
-        <RiEditBoxLine
-          className="text-xl duration-100 hover:scale-110"
-        />
-      </button>
-      <button
-        onClick={() => dispatch(setModalOpen({ modalType: 'tag-color-add' }))}
-        type="button"
-        className="hidden group-hover:block"
-      >
-        <RiAddFill
-          className="text-2xl duration-100 hover:scale-110"
-        />
-      </button>
+      {
+        isLoading
+          ? (
+            <LoadingSpinner
+              className="text-3xl fill-secondary"
+            />
+          )
+          : (
+            <button
+              onClick={() => dispatch(
+                deleteTagColor(color?._id),
+              )}
+              type="button"
+              title="Delete"
+              className="absolute hidden p-1 rounded-sm top-2 bg-secondary/20 right-2 group-hover:block"
+            >
+              <RxCross2
+                className="text-lg duration-200 hover:scale-125"
+              />
+            </button>
+          )
+        }
     </div>
   );
 }

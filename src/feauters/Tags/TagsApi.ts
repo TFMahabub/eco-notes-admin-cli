@@ -20,11 +20,11 @@ const TagsApi = api.injectEndpoints({
       invalidatesTags: ['tag'],
     }),
     postSingleTag: builder.mutation({
-      query(tagProduct) {
+      query(body) {
         return {
           url: '/post-tag',
           method: 'POST',
-          body: JSON.stringify(tagProduct),
+          body,
         };
       },
       invalidatesTags: ['tag'],

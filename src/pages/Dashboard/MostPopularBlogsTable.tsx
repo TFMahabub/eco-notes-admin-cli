@@ -15,7 +15,7 @@ function MostPopularBlogsTable() {
           <tr
             key={user}
             id="tr"
-            className="h-14 text-xs text-textColor bg-white border-b border-gray/10 even:bg-gray/5 last-of-type:border-b-0"
+            className="h-14 text-xs text-textColor bg-white border-b border-borderColor/10 even:bg-gray/5 last-of-type:border-b-0"
           >
             <td className="pl-4">
               <div className="flex gap-2 items-center">

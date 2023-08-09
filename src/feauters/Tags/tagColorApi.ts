@@ -13,7 +13,7 @@ const TagsColorApi = api.injectEndpoints({
     deleteSingleTagColor: builder.mutation({
       query(id) {
         return {
-          url: `/delete-tag/${id}`,
+          url: `/delete-single-tag-color/${id}`,
           method: 'DELETE',
         };
       },

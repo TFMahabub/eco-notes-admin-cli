@@ -6,15 +6,15 @@ interface PropsType extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode,
 }
 
-function PrimaryButton({ children, ...attribute }: PropsType) {
+function ButtonBorder({ children, ...attribute }: PropsType) {
   return (
     <button
       {...attribute}
-      className="flex items-center justify-center px-6 text-base rounded-md h-9 text-secondary bg-blue disabled:bg-blue/70"
+      className="px-3 text-base duration-150 border rounded-md flex-center h-9 text-textColor hover:bg-textColor/10 border-borderColor"
     >
       {children}
     </button>
   );
 }
 
-export default PrimaryButton;
+export default ButtonBorder;

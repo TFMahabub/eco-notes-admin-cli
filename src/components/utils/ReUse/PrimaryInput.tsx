@@ -11,11 +11,13 @@ interface PropsType extends InputHTMLAttributes<HTMLInputElement> {
   lable: string
   register: any;
   errorCondition?: object | undefined
+  maxLengthText?: string;
+  minLengthText?: string;
   error: any
 }
 
 function PrimaryInput({
-  name, id, lable, register, error, errorCondition, ...rest
+  name, id, lable, register, error, errorCondition, maxLengthText, minLengthText, ...rest
 }:PropsType) {
   return (
     <label htmlFor={id} className="flex flex-col gap-1 text-sm">
@@ -30,8 +32,9 @@ function PrimaryInput({
       />
       {error[name] && (
       <small className="text-error flex items-center gap-[2px]">
-        {error[name].type === 'maxLength' && '5 carecter is accepted'}
-        {error[name].type === 'required' && 'This field is required'}
+        {error[name].type === 'maxLength' && maxLengthText}
+        {error[name].type === 'minLength' && minLengthText}
+        {error[name].type === 'required' && `${lable} is required`}
         <RiErrorWarningLine />
       </small>
       )}

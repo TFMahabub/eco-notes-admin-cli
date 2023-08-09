@@ -1,2 +1,2 @@
-export const EMPTYDATATEXT = 'There is no data :(';
+export const EMPTYDATATEXT = 'Data is Gero :(';
 export const ERRORTEXT = 'Data Not Found :(';
